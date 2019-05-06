@@ -1,0 +1,15 @@
+{
+  "name": "carbtracker",
+  "version": "1.0.0",
+  "description": "App for diabetic management",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Quinten Mertesdorf",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3"
+  }
+}
