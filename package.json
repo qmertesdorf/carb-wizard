@@ -1,10 +1,11 @@
 {
   "name": "carbtracker",
   "version": "1.0.0",
-  "description": "App for diabetic management",
+  "description": "App for diabetic carb management",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "author": "Quinten Mertesdorf",
   "license": "ISC",
