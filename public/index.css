@@ -33,7 +33,7 @@ header h5 {
 }
 
 #server-input {
-  width: 90%;
+  width: calc(100% - 20px);
   height: 60px;
   background: none;
   border: none;
