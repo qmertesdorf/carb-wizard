@@ -28,12 +28,12 @@ header h5 {
 }
 
 .form {
-  width: 800px;
+	max-width: 800px;
   margin: 38px auto 20px;
 }
 
 #server-input {
-  width: 100%;
+  width: 90%;
   height: 60px;
   background: none;
   border: none;
