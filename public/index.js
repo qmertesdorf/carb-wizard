@@ -10,32 +10,15 @@ function searchUser() {
   let serverInput = $("#server-input").val();
 
   let settings = {
-    async: true,
-    crossDomain: true,
-    url: "https://trackapi.nutritionix.com/v2/natural/nutrients",
+    url: "/carbs",
     method: "POST",
-    headers: {
-      "x-app-id": "5cdae105",
-      "x-app-key": "deb0d2e28997abff65ae692e5c1dc034",
-      "content-type": "application/json",
-      "cache-control": "no-cache"
-    },
-    processData: false,
-    data:
-      '{\r\n "query":"' + serverInput + '",\r\n "timezone": "US/Eastern"\r\n}'
+    contentType: "application/json",
+    data: JSON.stringify({ query: serverInput })
+    // '{\r\n "query":"' + serverInput + '",\r\n "timezone": "US/Eastern"\r\n}'
   };
 
   $.ajax(settings).done(function(response) {
-    let display = "";
-    if (!response.foods[1]) {
-      display = response.foods[0].nf_total_carbohydrate;
-    } else {
-      display = response.foods.reduce(function(acc, nextVal) {
-        return (
-          (acc.nf_total_carbohydrate || acc) + nextVal.nf_total_carbohydrate
-        );
-      });
-    }
+    let display = response.totalCarbs;
     $("#display").html(display);
   });
 }
